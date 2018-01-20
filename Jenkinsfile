@@ -3,7 +3,7 @@ node {
    stage 'Checkout'
         checkout scm
 
-   stage 'SetupAndRun'
+   stage 'SetupAndTest'
         sh 'npm install'
         sh 'npm cache clean -f'
         sh 'npm install -g n'
