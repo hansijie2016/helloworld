@@ -5,7 +5,7 @@ node {
         checkout scm
 
    stage 'Setup'
-        sh 'npm install'
+        sh 'sudo npm install'
 
    stage 'Mocha test'
         sh './node_modules/mocha/bin/mocha'
