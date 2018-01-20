@@ -1,4 +1,5 @@
 #!groovy 
+
 node {
    stage 'Checkout'
         checkout scm
@@ -8,9 +9,6 @@ node {
         sh 'npm cache clean -f'
         sh 'npm install -g n'
         sh 'n stable'
-
-   //stage 'Mocha test'
-   //     sh 'npm test'
 
    stage 'Cleanup'
         echo 'prune and cleanup'
