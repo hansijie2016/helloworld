@@ -6,9 +6,12 @@ node {
 
    stage 'Setup'
         sh 'npm install'
+        sh 'npm cache clean -f'
+        sh 'npm install -g n'
+        sh 'n stable'
 
    stage 'Mocha test'
-        sh 'npm test'
+        sh "su - ec2-user -c 'npm test'"
 
    stage 'Cleanup'
         echo 'prune and cleanup'
