@@ -11,7 +11,7 @@ node {
         sh 'n stable'
 
    stage 'Mocha test'
-        sh 'npm test'
+        sh "su - ec2-user -c 'npm test'"
 
    stage 'Cleanup'
         echo 'prune and cleanup'
