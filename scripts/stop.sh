@@ -5,4 +5,3 @@
     grep -q '^helloworld start/running, process' \
   && [[ $? -eq 0 ]] \
   && sudo stop helloworld || echo "Application not started"  
-
