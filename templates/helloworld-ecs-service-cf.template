@@ -34,57 +34,13 @@
         },
         "service": {
             "Properties": {
-                "Cluster": {
-                    "Fn::ImportValue": {
-                        "Fn::Join": [
-                            "-",
-                            [
-                                {
-                                    "Fn::Select": [
-                                        0,
-                                        {
-                                            "Fn::Split": [
-                                                "-",
-                                                {
-                                                    "Ref": "AWS::StackName"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                "cluster-id"
-                            ]
-                        ]
-                    }
-                },
+                "Cluster": "staging-cluster-ECSCluster-76ILVG43TQCC",
                 "DesiredCount": 1,
                 "LoadBalancers": [
                     {
                         "ContainerName": "helloworld",
                         "ContainerPort": 3000,
-                        "TargetGroupArn": {
-                            "Fn::ImportValue": {
-                                "Fn::Join": [
-                                    "-",
-                                    [
-                                        {
-                                            "Fn::Select": [
-                                                0,
-                                                {
-                                                    "Fn::Split": [
-                                                        "-",
-                                                        {
-                                                            "Ref": "AWS::StackName"
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        "alb-helloworld-target-group"
-                                    ]
-                                ]
-                            }
-                        }
+                        "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:710409875639:targetgroup/stagi-Targe-15W9B0WLT6ADK/69d3ffb25ab7d9e7"
                     }
                 ],
                 "Role": {
