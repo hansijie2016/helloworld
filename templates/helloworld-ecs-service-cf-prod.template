@@ -34,13 +34,13 @@
         },
         "service": {
             "Properties": {
-                "Cluster": "staging-cluster-ECSCluster-76ILVG43TQCC",
+                "Cluster": "production-cluster-ECSCluster-1U7OZM1QQD3PD",
                 "DesiredCount": 1,
                 "LoadBalancers": [
                     {
                         "ContainerName": "helloworld",
                         "ContainerPort": 3000,
-                        "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:710409875639:targetgroup/stagi-Targe-15W9B0WLT6ADK/69d3ffb25ab7d9e7"
+                        "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:710409875639:targetgroup/produ-Targe-QEJFNWX56K4G/712aabe2313f1fce"
                     }
                 ],
                 "Role": {
